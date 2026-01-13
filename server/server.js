@@ -192,21 +192,10 @@ app.use((err, req, res, next) => {
   });
 });
 
-// 13. Server Start
-// const PORT = process.env.PORT || 4000;
-// app.listen(PORT, () => {
-//   console.log(`🚀 Server running on: http://localhost:${PORT}`);
-//   console.log(`📊 API Documentation: http://localhost:${PORT}/`);
-//   console.log(`❤️  Health Check: http://localhost:${PORT}/health`);
-// });
-
-
+13. Server Start
 const PORT = process.env.PORT || 4000;
-
-if (process.env.NODE_ENV !== "production") {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running locally on: http://localhost:${PORT}`);
-  });
-}
-
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on: http://localhost:${PORT}`);
+  console.log(`📊 API Documentation: http://localhost:${PORT}/`);
+  console.log(`❤️  Health Check: http://localhost:${PORT}/health`);
+});
