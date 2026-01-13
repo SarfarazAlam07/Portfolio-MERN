@@ -1,0 +1,53 @@
+# ---------------------------------
+# 1. Dependencies (Ye kabhi push mat karna)
+# ---------------------------------
+node_modules/
+*/node_modules/
+client/node_modules/
+server/node_modules/
+
+# ---------------------------------
+# 2. Security / Environment Variables (MOST IMPORTANT)
+# ---------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.*
+
+# ---------------------------------
+# 3. Production Build Output (React/Vite)
+# ---------------------------------
+dist/
+build/
+out/
+
+# ---------------------------------
+# 4. Logs & Debugging
+# ---------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ---------------------------------
+# 5. OS & Editor Files (Faltu files)
+# ---------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-workspace
+
+# ---------------------------------
+# 6. Optional: Uploaded Images (Agar local testing me kiye hain)
+# ---------------------------------
+# uploads/
+# server/uploads/
