@@ -34,26 +34,13 @@ app.use("/api/", limiter);
 // 3. CORS Configuration
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin) return callback(null, true);
-      
-      const allowedOrigins = [
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-        process.env.FRONTEND_URL
-      ].filter(Boolean);
-      
-      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-    credentials: true,
+    origin: [
+      "http://localhost:5173",                 // Local testing ke liye
+      "https://sarfarazalam.vercel.app/" 
+    ],
+    credentials: true, // Cookies allowed (Login ke liye zaroori)
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-    exposedHeaders: ["Set-Cookie"]
   })
 );
 
